@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  height: 400px;
+  padding: 20px;
+  color: white;
+}
+
+.hero .text {
+  max-width: 50%;
+}
+
+.hero img {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 0 5px black);
+}
+
+.major {
+  margin-left: 2rem;
+  margin-bottom: 0;
+  font-size: 38px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to a new line if needed */
+  justify-content: space-between; /* Space items evenly */
+  padding: 20px;
+}
+
+.box {
+  flex: 1 1 calc(33.33% - 20px); /* Responsive 3-column layout */
+  margin: 10px;
+  padding: 2%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box h1 {
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+.box p {
+  margin: 10px 0 0;
+}
+
+.why {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.why h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.why p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 10px 0;
+}
+
+.why .bullet {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.why .bullet::before {
+  content: "✔";
+  color: green;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-top: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 80%; /* Make boxes full width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+  }
+}
